@@ -1,7 +1,6 @@
 # Node stuff
 npm-debug.log
 node_modules
-package-lock.json # Favour yarn.lock, heroku fails if both included
 
 # API keys
 .env
@@ -12,3 +11,8 @@ package-lock.json # Favour yarn.lock, heroku fails if both included
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# Compiled js
+public/js/main-compiled.js
+public/js/main-compiled.js.map
+build/

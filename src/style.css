@@ -1,0 +1,191 @@
+@tailwind base;
+
+body {
+  @apply bg-dark-blue p-12 text-mid-grey;
+  font-family: 'Space Mono', monospace;
+  padding: 0;
+}
+
+@screen light-mode {
+  body {
+    @apply bg-white;
+  }
+}
+
+h1 {
+  font-family: 'squealerregular', serif;
+  font-weight: normal;
+  text-shadow: -1px 0 lightpink, 0 1px lightpink, 1px 0 lightpink,
+    0 -1px lightpink;
+}
+
+h1 span {
+  font-family: 'Press Start 2P', monospace;
+  font-weight: normal;
+  text-shadow: -1px 0 lightblue, 0 1px lightblue, 1px 0 lightblue,
+    0 -1px lightblue;
+}
+
+@screen light-mode {
+  h1 span {
+    text-shadow: -1px 0 darkblue, 0 1px darkblue, 1px 0 darkblue,
+      0 -1px darkblue;
+  }
+}
+
+small {
+  font-family: 'Press Start 2P', monospace;
+}
+
+a {
+  @apply text-light-blue;
+}
+
+a:hover {
+  @apply text-light-pink;
+}
+
+@screen light-mode {
+  a {
+    @apply text-dark-pink;
+  }
+
+  a:hover {
+    @apply text-soft-blue;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'squealerregular';
+  src: url('./fonts/squealer-webfont.eot');
+  src: url('./fonts/squealer-webfont.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/squealer-webfont.woff2') format('woff2'),
+    url('./fonts/squealer-webfont.woff') format('woff'),
+    url('./fonts/squealer-webfont.ttf') format('truetype'),
+    url('./fonts/squealer-webfont.svg#squealerregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lazer84regular';
+  src: url('./fonts/lazer84-webfont.eot');
+  src: url('./fonts/lazer84-webfont.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/lazer84-webfont.woff2') format('woff2'),
+    url('./fonts/lazer84-webfont.woff') format('woff'),
+    url('./fonts/lazer84-webfont.ttf') format('truetype'),
+    url('./fonts/lazer84-webfont.svg#lazer84regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.dim {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.dim:hover {
+  opacity: 0.6;
+}
+
+.bn.br--left.br1.ph2 {
+  transition: box-shadow ease-in-out 0.2s;
+}
+
+.bn.br--left.br1.ph2:focus {
+  outline: none;
+}
+
+/* Generated at http://brenna.github.io/csshexagon/ */
+.hexagon {
+  position: relative;
+  width: 128px;
+  height: 73.9px;
+  margin: 36.95px 0;
+  border: solid 5px #fefcff;
+}
+
+@screen light-mode {
+  .hexagon {
+    border: solid 5px #333333;
+  }
+}
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 90.51px;
+  height: 90.51px;
+  overflow: hidden;
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 13.75px;
+  text-align: initial;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: '';
+  position: absolute;
+  width: 118px;
+  height: 68.12733176437585px;
+  transform: rotate(45deg) scaleY(1.7321) translateY(-34.0637px);
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -45.2548px;
+  border-top: solid 7.0711px #fefcff;
+  border-right: solid 7.0711px #fefcff;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -45.2548px;
+  border-bottom: solid 7.0711px #fefcff;
+  border-left: solid 7.0711px #fefcff;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: '';
+  position: absolute;
+  top: 2.8868px;
+  left: 0;
+  width: 118px;
+  height: 68.1273px;
+  z-index: 2;
+  background: inherit;
+}
+
+.pull-request,
+.faqs {
+  @apply bg-dark-blue-alt block;
+
+  transition: all 0.3s ease-out;
+}
+
+@screen light-mode {
+  .pull-request,
+  .faqs {
+    @apply bg-light-blue block;
+  }
+}
+
+.pull-request:hover {
+  @apply shadow-2xl;
+
+  transform: scale(1.04, 1.04);
+}
